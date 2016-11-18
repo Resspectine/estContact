@@ -2,6 +2,8 @@ package HOLDER;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
@@ -17,16 +19,21 @@ public class Frame {
         label1.setBounds(10,5,100,40);
         panel.add(label1);
         JFormattedTextField dialog = new JFormattedTextField();
-        dialog.setBounds(10,35,500,500);
+        dialog.setBounds(10,35,200,200);
+
         panel.add(dialog);
-        JButton button1= new JButton("Нажми");
-        button1.setBounds(250,100,200,100);
-        //panel.add(button1);
-        JButton button2= new JButton("Нажми2");
-        button2.setBounds(20,100,200,100);
-       // panel.add(button2);
+        JButton button= new JButton("Нажми");
+        button.setBounds(220,215,100,20);
+        button.setActionCommand("Button1");
+        panel.add(button);
         frame.add(panel);
         frame.pack();
         frame.setVisible(true);
+    }
+}
+class ButtonListner implements ActionListener{
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 }
